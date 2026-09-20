@@ -1,6 +1,7 @@
 // import { useState } from 'react'
 
 import './App.css'
+import Hero from './Component/Hero'
 import Nav from './Component/Nav'
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
   return (
    <div className="App">
        <Nav></Nav>
+       <Hero></Hero>
     </div>
   )
 }

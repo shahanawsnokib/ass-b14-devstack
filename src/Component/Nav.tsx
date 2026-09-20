@@ -13,19 +13,23 @@ const Nav = () => {
           </div>
 
           <div className="hidden md:flex items-center gap-8">
-            <a href="#" className="hover:text-blue-500">
+            <a href="#" className="hover:text-orange-700">
               Home
             </a>
 
-            <a href="#" className="hover:text-blue-500">
+            <a href="#" className="hover:text-orange-700">
+              Technologies
+            </a>
+
+            <a href="#" className="hover:text-orange-700">
+              Project
+            </a>
+
+            <a href="#" className="hover:text-orange-700">
               About
             </a>
 
-            <a href="#" className="hover:text-blue-500">
-              Services
-            </a>
-
-            <a href="#" className="hover:text-blue-500">
+            <a href="#" className="hover:text-orange-700">
               Contact
             </a>
           </div>
@@ -47,22 +51,25 @@ const Nav = () => {
         {isOpen && (
           <div className="md:hidden mt-7 pb-5">
             <div className="flex flex-col gap-4">
-              <a href="#" className="hover:text-blue-500">
-                Home
-              </a>
+                    <a href="#" className="hover:text-orange-700">
+              Home
+            </a>
 
-              <a href="#" className="hover:text-blue-500">
-                About
-              </a>
+            <a href="#" className="hover:text-orange-700">
+              Technologies
+            </a>
 
-              <a href="#" className="hover:text-blue-500">
-                Services
-              </a>
+            <a href="#" className="hover:text-orange-700">
+              Project
+            </a>
 
-              <a href="#" className="hover:text-blue-500">
-                Contact
-              </a>
+            <a href="#" className="hover:text-orange-700">
+              About
+            </a>
 
+            <a href="#" className="hover:text-orange-700">
+              Contact
+            </a>
               <button className="btn rounded-4xl">Sign In</button>
 
               <button className="btn btn-warning rounded-4xl">Sign Up</button>

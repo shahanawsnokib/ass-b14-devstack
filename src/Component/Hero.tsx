@@ -15,10 +15,10 @@ const Hero = () => {
           side by side, and put together the stack that fits your next project.
         </p>
 
-        <button className="btn btn-warning rounded-2xl mr-2">
+        <button className="btn btn-warning rounded-2xl mr-2 mt-4">
           Explore Technologies
         </button>
-        <button className="btn rounded-2xl">Learn More</button>
+        <button className="btn rounded-2xl mt-4">Learn More</button>
       </div>
 
       <img src={banner} alt="" />

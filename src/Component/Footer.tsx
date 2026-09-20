@@ -5,7 +5,7 @@ import logo from "../assets/logo-text.png";
 const Footer = () => {
   return (
     <footer className="border-t">
-      <div className="container mx-auto py-10">
+      <div className="container mx-auto py-10 items-center md:items-start ">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
 
           <div>

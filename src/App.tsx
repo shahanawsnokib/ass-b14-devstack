@@ -28,7 +28,7 @@ const promise =techPromise()
 
 
 
-   <div className="App">
+   <div className="mx-6">
        <Nav></Nav>
        <Hero></Hero>
         <Suspense fallback={    <span className="loading loading-bars loading-xl">Loading</span>}>

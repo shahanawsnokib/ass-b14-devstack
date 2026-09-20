@@ -1,8 +1,7 @@
 import React, { use } from "react";
-
+import { toast } from "react-toastify";
 import TechCard from "./TechCard";
 import Stack from "./Stack";
-
 import type { TtachData } from "./TtachData";
 
 interface Ipromise {
@@ -16,32 +15,45 @@ const Technologies = ({ promise }: Ipromise) => {
 
   const addToStack = (technology: TtachData) => {
     setSelectedTech((current) => {
-      // Don't add the same technology twice
       const alreadyExists = current.some(
         (item) => item.id === technology.id
       );
 
       if (alreadyExists) {
+        toast.warning(`${technology.name} is already in your stack!`);
         return current;
       }
+
+      toast.success(`${technology.name} added to your stack!`);
 
       return [...current, technology];
     });
   };
 
   const removeFromStack = (id: string) => {
-    setSelectedTech((current) =>
-      current.filter((item) => item.id !== id)
-    );
+    setSelectedTech((current) => {
+      const technology = current.find((item) => item.id === id);
+
+      if (technology) {
+        toast.info(`${technology.name} removed from your stack!`);
+      }
+
+      return current.filter((item) => item.id !== id);
+    });
   };
 
   const removeAll = () => {
+    if (selectedTech.length === 0) {
+      toast.warning("Your stack is already empty!");
+      return;
+    }
+
     setSelectedTech([]);
+    toast.info("All technologies removed from your stack!");
   };
 
   return (
     <div className="container mx-auto">
-
       <div className="flex flex-col items-center justify-center md:items-start md:justify-start">
         <h1 className="text-4xl font-bold">
           Explore the{" "}
@@ -56,7 +68,6 @@ const Technologies = ({ promise }: Ipromise) => {
       </div>
 
       <div className="my-10 flex flex-col gap-6 md:flex-row">
-
         <section className="w-full md:w-9/12">
           <TechCard
             tech={tech}
@@ -71,7 +82,6 @@ const Technologies = ({ promise }: Ipromise) => {
             removeAll={removeAll}
           />
         </section>
-
       </div>
     </div>
   );

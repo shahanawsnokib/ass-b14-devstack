@@ -1,5 +1,4 @@
 import React from "react";
-
 import type { TtachData } from "./TtachData";
 
 interface TechCardProps {
@@ -10,13 +9,11 @@ interface TechCardProps {
 const TechCard = ({ tech, addToStack }: TechCardProps) => {
   return (
     <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-
       {tech.map((techItem: TtachData) => (
         <div
           key={techItem.id}
           className="w-full rounded-2xl border border-slate-200 bg-white p-6 shadow-sm"
         >
-
           <div className="flex items-start justify-between">
             <img
               src={techItem.icon}
@@ -50,9 +47,7 @@ const TechCard = ({ tech, addToStack }: TechCardProps) => {
 
             <div className="flex items-center gap-1 text-sm font-medium">
               <span className="text-yellow-400">★</span>
-              <span className="text-slate-700">
-                {techItem.rating}
-              </span>
+              <span className="text-slate-700">{techItem.rating}</span>
             </div>
           </div>
 
@@ -62,10 +57,8 @@ const TechCard = ({ tech, addToStack }: TechCardProps) => {
           >
             Add to Stack
           </button>
-
         </div>
       ))}
-
     </div>
   );
 };

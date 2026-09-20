@@ -7,6 +7,7 @@ import Nav from './Component/Nav'
 import Technologies from './Component/Technologies'
 import Footer from './Component/Footer'
 import type { TtachData } from './Component/TtachData'
+import { ToastContainer } from 'react-toastify'
 // import {TtachData} from './Component/TtachData'
 
 
@@ -36,6 +37,9 @@ const promise =techPromise()
         
 
         <Footer></Footer>
+
+
+        <ToastContainer position="top-right" autoClose={2000} />
     </div>
   )
 }
